@@ -1,0 +1,22 @@
+entry fact
+t1 =  x > 1
+if false t1 goto L1
+begin_params
+t2 = x-1
+param t2
+t3 = call fact, 1
+t4 = x * t3
+return t4
+Label L1
+return 1
+entry main
+read x
+t5 =  x > 0
+if false t5 goto L2
+begin_params
+t6 = x
+param t6
+t7 = call fact, 1
+write t7
+Label L2
+return
